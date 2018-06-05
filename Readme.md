@@ -12,9 +12,9 @@ Recommend videos based on the comments from youtube data api. Using kafak and py
 
 ## Before each step, make sure the port will be used is idle.
  (Very important! Sit near a wireless router:) Good luck!)
+ (In 3 & 4, you may need: spark-streaming-kafka-assembly_2.11-1.6.3.jar)
  1. Run ZooKeeper server (on defult port);
  2. Run Kafka Server and create a tpoic "test" (on defult port);
- (In the next two steps, you may need: spark-streaming-kafka-assembly_2.11-1.6.3.jar)
  3. Run (spark submit) producer_socket.py (will run on port 2055);
  4. Run (spark submit) dataprocess_server_socket.py (will run on port 2033);
  5. Run ssr.py (will run on port 5678);
