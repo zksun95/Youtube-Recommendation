@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Angular-nvD3 Scatter Chart</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.3/nv.d3.min.css"/> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.3/nv.d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.7/angular-nvd3.min.js"></script>
+
+    <script src="app.js"></script>
+
+  </head>
+
+  <body ng-controller="MainCtrl">
+
+
+<!--     <br><a href="http://krispo.github.io/angular-nvd3/" target="_blank" style="float: right;">See more</a> -->
+      <td align = "center">
+            Keywords:
+            <input type="text" id="message"/>
+            <input type="button" id="query" value="Query">
+      </td>
+    <nvd3 options="options" data="data"></nvd3>
+    <center>
+      <div id="view">      </div>
+    </center>
+      
+      <img src="">
+    
+
+        <script>
+            function sub(){
+              var usermessage = document.getElementById("message").value;
+              var usernumber = document.getElementById("number").value;
+              var dic={"message" : usermessage, "number" : usernumber}
+              usermessage = JSON.stringify(dic)
+              console.log(usermessage)    
+            };
+
+            function makeStringOnWeb(data){
+                var divNode = document.getElementById("view");
+                var liNode = document.createElement("li");
+                liNode.innerHTML = data;
+                divNode.appendChild(liNode);    
+            };
+
+            function makeDataOnWeb(data){
+                var divNode = document.getElementById("view");
+                var liNode = document.createElement("li");
+                liNode.innerHTML = data["title"]+"<br><img src='"+data["thumbnails"]+"' width='320' height='180'/><br>";
+                divNode.appendChild(liNode);    
+            };
+        </script>
+  </body>
+
+</html>

@@ -1,0 +1,6 @@
+/.vscode
+
+/server/.ipynb_checkpoints
+/server/.ipynb_checkpoints
+/server/__pycache__
+/server/data/*
