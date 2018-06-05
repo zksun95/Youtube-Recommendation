@@ -1,6 +1,6 @@
 Recommend videos based on the comments from youtube data api. Using kafak and pyspark to process the streaming data. NLP part could be improved...
 
-##Prerequisites 
+## Prerequisites 
  ZooKeeper server
  Kafka server
  Kafka Python
@@ -10,7 +10,7 @@ Recommend videos based on the comments from youtube data api. Using kafak and py
 
 **You have to put your own youtube data api key in /server/API_KEY.txt**
 
-##Before each step, make sure the port will be used is idle.
+## Before each step, make sure the port will be used is idle.
  (Very important! Sit near a wireless router:) Good luck!)
  1. Run ZooKeeper server (on defult port);
  2. Run Kafka Server and create a tpoic "test" (on defult port);
